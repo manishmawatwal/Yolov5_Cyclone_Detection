@@ -25,6 +25,15 @@ image. There are certain cases when multiple cyclones can be detected simultaneo
 always a possibility of leakage of the data between training and testing samples. To avoid this, the evaluation is carried separately with a testing dataset of 2022 while keeping 2000-21 as training dataset. This, however, doesn’t guarantee the
 proper representation of all the cyclone classes.
 
+## Results and Discussion
+The YOLOv5 model utilised for detecting cyclone in images has shown promising results, with a precision of 60% and a recall rate of 96.9%. A high rate of recall suggests that it effectively captures a significant portion of actual cyclones.
+However, the precision score indicates that there is room for improvement in accurately identifying cyclones while minimizing false positives. mAP of 77% further suggests a relatively good balance between precision and recall. Additionally,
+the model’s accuracy over the 2022 dataset stands at 89%, indicating its general effectiveness in correctly classifying images containing cyclones. This metric reflects the model’s performance across the entire dataset and demonstrates its
+ability to handle various cyclone scenarios. The result of a case study on a cyclone and the output of the YOLOv5 model is shown. Fig. 4 shows the original image received from the CIMSS dataset, Fig. 5 shows the cropped version of the image,
+and Fig. 6 shows the bounding box around the actual cyclone in the Bay of Bengal Fig. 7 shows the enlarged view of the cyclone. Fig. 8, 9 shows the case where multiple cyclones are detected simultaneously in the NIO basin. This shows the
+versatility of YOLOv5 model. The model can detect multiple cyclone images accurately with correct labels (i.e., cyclone class) and confidence score.
+While these results demonstrate the YOLOv5 model’s competency in cyclone detection, there are still areas for enhancement, particularly in improving precision to minimize false positives. Moreover, ongoing evaluation and validation with diverse datasets could provide more robust insights into the model’s capabilities and areas for improvement.
+
 ## Conclusion and Future Scope
 In conclusion, the YOLOv5 model has shown great promise in detecting TCs from satellite imagery. However, there are limitations to its accuracy due to a lack of sufficient data and the temporal resolution of 5 knots. This highlights the
 need for more research and data collection to further improve the model’s performance. Future object detection models that take advantage of the latest advancements in DL techniques, such as attention mechanisms and graph neural networks,
@@ -32,3 +41,24 @@ could potentially overcome these limitations and provide even more accurate cycl
 detection and contribute to better management of the economic losses and environmental impact caused by these powerful storms. YOLOv5 can also be used for real-time TC detection’s. YOLOv5 can be especially useful in mitigating the impact of
 natural disasters by providing advance warnings to those living in affected areas. By using this model, authorities can quickly identify and track the movements of TCs, thereby allowing for timely evacuation orders and other measures to be put in
 place.
+
+## References
+1. Liu, Y.; Racah, E.; Correa, J. Application of deep convolutional neural networks for detecting extreme weather in climate datasets. arXiv 2016, arXiv:1605.01156.
+2. Nakano, D.M.; Sugiyama, D. Detecting Precursors of Tropical Cyclone using Deep Neural Networks. In Proceedings of the 7th International Workshop on Climate Informatics, Boulder, CO, USA, 20–22 September 2017.
+3. Kumler-Bonfanti, C.; Stewart, J.; Hall, D. Tropical and Extratropical Cyclone Detection Using Deep Learning. J. Appl. Meteorol. Climatol. 2020, 59, 1971–1985.
+4. Giffard-Roisin, S.; Yang, M.; Charpiat, G. Tropical cyclone track forecasting using fused deep learning from aligned reanalysis data. Front. Big Data 2020, 3, 1.
+5. Cao, J.; Chen, Z.; Wang, B. Deep Convolutional networks with superpixel segmentation for hyperspectral image classification. In Proceedings of the 2015 IEEE International Geoscience and Remote Sensing Symposium (IGARSS), Beijing, China, 10–15 July 2016; pp. 3310–3313.
+6. Li, Z.; Guo, F.; Li, Q.; Ren, G.; Wang, L. An Encoder–Decoder Convolution Network with Fine-Grained Spatial Information for Hyperspectral Images Classification. IEEE Access 2020, 8, 33600.
+7. Pan, S.J.; Tsang, I.W.; Kwok, J.T.; Yang, Q. Domain Adaptation via Transfer Component Analysis. IEEE Trans. Neural Netw. 2011, 22, 199–210.
+8. Yang, J.; Zhao, Y.; Chan, J. Learning and transferring deep joint spectral–spatial features for hyperspectral classification. IEEE Trans. Geosci. Remote Sens. 2017, 55, 4729–4742.
+9. Liu, X.; Sun, Q.; Meng, Y.; Fu, M.; Bourennane, S. Hyperspectral image classification based on parameter-optimized 3D-CNNs combined with transfer learning and virtual samples. Remote Sens. 2018, 10, 1425.
+10. Li, L., Shuai, Z., Hu, J., Zhang, Y. (2022). Classification of Tropical Cyclone Intensity Based on Deep Learning and YOLO V5. In: Sun, X., Zhang, X., Xia, Z., Bertino, E. (eds) Advances in Artificial Intelligence and Security. ICAIS 2022. Communications in Computer and Information Science, vol 1586. Springer, Cham.
+11. Pang S, Xie P, Xu D, Meng F, Tao X, Li B, Li Y, Song T. NDFTC: A New Detection Framework of Tropical Cyclones from Meteorological Satellite Images with Deep Transfer Learning. Remote Sensing. 2021; 13(9):1860.
+12. Haque, M.N., Ashfaqul Adel, A.A.M., Alam, K.S. (2022). Deep Learning Techniques in Cyclone Detection with Cyclone Eye Localization Based on Satellite Images. In: Arefin, M.S., Kaiser, M.S., Bandyopadhyay, A., Ahad, M.A.R., Ray, K. (eds) Proceedings of the International Conference on Big Data, IoT, and Machine Learning. Lecture Notes on Data Engineering and Communications Technologies, vol 95. Springer, Singapore.
+13. Yalong Pi, Nipun D.Nath, Amir H. Behzadan, “Convolutional neural networks for object detection in aerial imagery for disaster response and recovery”, Advanced Engineering Informatics, January 2020, vol 43.
+14. Lam L, George M, Gardoll S, Safieddine S, Whitburn S, Clerbaux C. Tropical Cyclone Detection from the Thermal Infrared Sensor IASI Data Using the Deep Learning Model YOLOv3. Atmosphere. 2023; 14(2):215.
+15. University of Wisconsin – CIMSS.
+16. IMD Cyclone Best Track Data.
+17. Redmon, J.; Farhadi, A. Yolov3: An incremental improvement. arXiv 2018, arXiv:1804.02767.
+18. Horvat, Marko & Jeleˇcevi´c, Ljudevit & Gledec, Gordan. (2022). A comparative study of YOLOv5 models performance for image localization and classification.
+19. Zehui Zhao, Laith Alzubaidi, Jinglan Zhang, Ye Duan, Yuantong Gu, A comparison review of transfer learning and self-supervised learning: Definitions, applications, advantages and limitations, Expert Systems with Applications, Volume 242, 2024, 122807, ISSN 0957-4174.
